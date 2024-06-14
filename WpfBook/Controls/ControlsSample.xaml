@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="WpfBook.Controls.ControlsSample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfBook.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1000">
+
+    <!--<UserControl.Triggers>
+        <EventTrigger RoutedEvent="Button.Click" SourceName="ButtonPlaySound">
+            <EventTrigger.Actions>
+                <SoundPlayerAction Source="Media/KhSave.wav"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </UserControl.Triggers>-->
+
+    <DockPanel Background="White">
+        
+        <!-- StatusBar -->
+        <StatusBar DockPanel.Dock="Bottom" Height="30" BorderThickness="1" BorderBrush="LightSkyBlue">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StatusBarItem Grid.Column="0">
+                <TextBlock>StatusBar1</TextBlock>
+            </StatusBarItem>
+            <Separator Grid.Column="1"/>
+            <StatusBarItem Grid.Column="2">
+                <TextBlock>StatusBar2</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Display Information -->
+            <StackPanel Grid.Column="0" Orientation="Vertical">
+                <!-- Label -->
+                <Label BorderThickness="1" BorderBrush="Red">Label</Label>
+                <!-- TextBlock -->
+                <TextBlock Name="textBlock1" TextWrapping="Wrap">
+                    <Bold>TextBlock</Bold> is designed to be <Italic>lightweight</Italic>, and is geared specifically at integrating <Italic>small</Italic> portions of flow content into a UI.
+                </TextBlock>
+                <!-- ProgressBar -->
+                <ProgressBar BorderThickness="1" BorderBrush="Red" Height="20" Minimum="0" Maximum="100" Value="60"></ProgressBar>
+            </StackPanel>
+
+            <!-- Buttons -->
+            <StackPanel Grid.Column="1" Orientation="Vertical">
+                <Button Click="Button_Click">Button</Button>
+                <RepeatButton Click="Button_Click" Interval="1000" Delay="500">RepeatButton</RepeatButton>
+            </StackPanel>
+
+            <!-- Text Input -->
+            <StackPanel Grid.Column="2" Orientation="Vertical">
+                <!-- TextBox -->
+                <TextBox>
+                    Initial text contents of the TextBox.
+                </TextBox>
+                <!-- RichTextBox -->
+                <RichTextBox>
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run>Paragraph 1</Run>
+                        </Paragraph>
+                        <Paragraph>
+                            <Run>Paragraph 2</Run>
+                        </Paragraph>
+                        <Paragraph>
+                            <Run>Paragraph 3</Run>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+                <!-- PasswordBox -->
+                <PasswordBox/>
+            </StackPanel>
+
+            <!-- Selection Controls -->
+            <StackPanel Grid.Column="3" Orientation="Vertical">
+                <!-- CheckBox -->
+                <CheckBox IsChecked="True"></CheckBox>
+                <!-- ComboBox -->
+                <ComboBox Name="SampleComboBox"
+                          Text="My Cities"
+                          IsEditable="true"
+                          IsReadOnly="true"/>
+                <!-- ListBox -->
+                <ListBox Name="SampleListBox" Width="100" Height="55" SelectionMode="Single" />
+                <!-- RadioButton -->
+                <StackPanel>
+                    <RadioButton Name="rb1">Yes</RadioButton>
+                    <RadioButton Name="rb2">No</RadioButton>
+                    <RadioButton Name="rb3" IsChecked="True">No opinion</RadioButton>
+                </StackPanel>
+                <!-- Slider -->
+                <Slider Name="RectangleHeight"  Margin="10, 0, 0, 0" 
+                        Width="100" Orientation="Horizontal" HorizontalAlignment="Left" 
+                        Value="50" Minimum="0" Maximum="200" 
+                        SmallChange="1" LargeChange="10"
+                        TickPlacement="BottomRight" TickFrequency="25"
+                        IsSnapToTickEnabled="True"/>
+            </StackPanel>
+
+            <!-- Media -->
+            <StackPanel Grid.Column="4" Orientation="Vertical">
+                <!--<Image Source="../Resources/KhLogo.png"/>-->
+                <Image Name="SampleImage" Source="{StaticResource KhLogo}"/>
+                <Button Name="ButtonChangeImage" Click="Button_ChangeImage">Change Image</Button>
+                <Button Name="ButtonPlaySound" Click="Button_PlaySound">Play Sound</Button>
+            </StackPanel>
+
+            <!-- Media -->
+            <StackPanel Grid.Column="5" Orientation="Vertical">
+                <Button Click="Button_OpenFile">OpenFileDialog</Button>
+                <Button Click="Button_SaveFile">SaveFileDialog</Button>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>
