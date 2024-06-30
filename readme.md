@@ -11,7 +11,7 @@ The content of the app can be located in containers:
 - User Control: User Controls can be placed inside Windows, Pages or other Controls.
 - Page: Similar to User Controls, however they are use for navigation, the app can go back and forth between pages. Note that they remain in memory to do so.
 
-## Contents
+## WPF
 
 - [Panel Layouts](Book/WpfLayouts.md)
 - [Controls](Book/WpfControls.md)
@@ -20,10 +20,15 @@ The content of the app can be located in containers:
 - [Styling](Book/WpfStyling.md)
 - [Resources](Book/WpfResources.md)
 - [Navigation](Book/WpfNavigation.md)
-- [Async](Book/WpfAsync.md)
+- Binding
+- [Converters](Book/WpfConverters.md)
+- States (Maintaining static state vs passing state)
+- Control communication (Events vs passing objects)
 
+## C#
 
-## Binding
-## Converters
-## States (Maintaining static state vs passing state)
-## Control communication (Events vs passing objects)
+- [Coding Standards and Naming Conventions](Book/CsStandardsConventions.md)
+- [Binary and Streams](Book/CsBinaryStreams.md)
+- [Properties](Book/CsProperties.md)
+- [Enums](Book/CsEnums.md)
+- [Async](Book/CsAsync.md)
