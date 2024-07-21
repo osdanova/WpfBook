@@ -16,7 +16,7 @@ The content of the app can be located in containers:
 - [Panel Layouts](Book/WpfLayouts.md)
 - [Controls](Book/WpfControls.md)
 - [Data Controls](Book/WpfDataControls.md)
-- [Navigation](Book/WpfNavigation.md)
+- [File Dialogs](Book/WpfFileDialogs.md)
 - [Styling](Book/WpfStyling.md)
 - [Resources](Book/WpfResources.md)
 - [Navigation](Book/WpfNavigation.md)
@@ -32,3 +32,7 @@ The content of the app can be located in containers:
 - [Properties](Book/CsProperties.md)
 - [Enums](Book/CsEnums.md)
 - [Async](Book/CsAsync.md)
+
+## .Net
+
+- [Setup](Book/NetSetup.md)
